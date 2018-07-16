@@ -1,2 +1,2 @@
 # script-tests
-Script de instalación/desinstalación tests de comunicaciones.
+Script de instalación/desinstalación tests de comunicaciones
