@@ -28,9 +28,4 @@ echo -e "${ORANGE}Installing dependencies...${NC}"
 apt install -y python3
 echo -e "${ORANGE}Executing commControl.py...${NC}"
 python commControl.py &
-#echo -e "${ORANGE}Editing rc.local...${NC}"
-#sed -i 's/exit 0/sudo python \/home\/pi\/blueinstaller\/commControl.py \& & /' /etc/rc.local
-#echo -e "${BLUE}THE END. The system will reboot in 30 s ...${NC}"
-#sleep 30
-#shutdown -r now
 echo -e "${BLUE}THE END${NC}"
