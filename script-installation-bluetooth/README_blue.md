@@ -8,4 +8,4 @@
   the system will REBOOT!
 
 # DATA STORAGE
-  Received data will be written in /script-tests/AEInnova.log
+  Received data will be written in /script-tests/script-installation-bluetooth/AEInnova.log
