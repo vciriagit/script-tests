@@ -29,7 +29,10 @@ if [ $OPTION == "1" ]; then
     popd
 fi
 if [ $OPTION == "2" ]; then
-    echo -e "${RED}2${NC}"
+    echo -e "${BLUE}Bluetooth${NC}"
+    pushd /script-tests/script-installation-bluetooth
+    sudo ./install_blue.sh
+    popd
 fi
 if [ $OPTION == "3" ]; then
     echo -e "${RED}3${NC}"
