@@ -36,4 +36,4 @@ if [ $OPTION == "3" ]; then
     echo -e "${RED}3${NC}"
 fi
 echo
-echo -e "${RED}THE END${NC}"
+echo -e "${GREEN}THE END${NC}"

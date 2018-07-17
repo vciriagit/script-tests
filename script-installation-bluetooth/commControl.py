@@ -35,6 +35,8 @@ def main():
         bluetoothDataTest()
 	time.sleep(5)
 	i = i + 1
+    if i==3:
+        print "End of Bluetooth Test"
     return
 
 def handleErrors(errornumber, sleeptime):
@@ -60,7 +62,7 @@ def bluetoothSetup():
     cmd = 'sudo rfcomm release 0'
     os.system(cmd)
     #print cmd
-    print str(START_SLEEP) + " seconds to start..."
+    print str(START_SLEEP) + " seconds to start Bluetooth Test..."
     time.sleep(START_SLEEP)
     # binding
     os.system(BIND_CMD_0)
