@@ -210,6 +210,11 @@ sed -i 's/localhost\/loraserver_as?sslmode=disable/loraserver_as:dbpassword@loca
 sed -i 's/localhost\/loraserver_ns?sslmode=disable/loraserver_ns:dbpassword@localhost\/loraserver_ns?sslmode=disable/' /etc/loraserver/loraserver.toml
 JWT_SECRET=$(openssl rand -base64 32)
 sed -i 's/jwt_secret=""/jwt_secret="$JWT_SECRET"/' /etc/lora-app-server/lora-app-server.toml
-echo -e "${ORANGE}The system will reboot in 30 seconds...${NC}"
-sleep 30
+echo -e "${RED}After the LoRa installation the system needs to reboot.${NC}"
+echo -e "${ORANGE}After reboot you must configure LoRa Server in https://localhost:8080${NC}"
+echo -e "${ORANGE}You can follow the instructions of http://alfresco.aeinnova.aei/share/page/site/2017030601---gateway/wiki-page?title=Configuraci%C3%B3n_de_una_Gateway_con_comunicaciones_LoRa.${NC}"
+echo -e "${ORANGE}Press any key to reboot...${NC}"
+read key
+echo -e "${ORANGE}The system will reboot in 5 seconds...${NC}"
+sleep 5
 shutdown -r now

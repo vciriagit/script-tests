@@ -1,6 +1,6 @@
 # script-tests
 Script de instalación/desinstalación tests de comunicaciones
 
-Clone this rep in / with sudo git clone
+1. Clone this rep in / with sudo git clone https://github.com/vciriagit/script-tests.git
 
-Execute sudo ./menu.sh
+2. Make menu.sh executable with "sudo chmod +x menu.sh". Execute it with "sudo ./menu.sh"
