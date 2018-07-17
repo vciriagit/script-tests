@@ -1,0 +1,16 @@
+# HOW TO CONNECT YOUR BLUETOOTH DEVICE
+ # You will have to do this only once
+ # Please, type the following commands:
+
+ sudo bluetoothctl
+ agent on
+ default-agent
+ scan on
+
+ # you will need to identify the MAC address of your device among the list shown, then:
+
+ pair XX:XX:XX:XX:XX:XX
+ # the device PIN will be requested (usually is 1234 or 0000)
+ trust XX:XX:XX:XX:XX:XX
+
+# NOW THAT YOUR BLUETOOTH DEVICE IS CONNECTED, YOU CAN EXECUTE THE INSTALLER (install_blue.sh)
