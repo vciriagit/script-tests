@@ -27,5 +27,5 @@ echo
 echo -e "${ORANGE}Installing dependencies...${NC}"
 apt install -y python3
 echo -e "${ORANGE}Executing commControl.py...${NC}"
-python commControl.py &
+python ../test-bluetooth/commControl.py &
 echo -e "${BLUE}THE END${NC}"
