@@ -7,16 +7,21 @@
  NC='\033[0m' # No Color
 # Stop on the first sign of trouble
 set -e
-if [ $UID != 0 ]; then
-    echo -e "${RED}ERROR: Operation not permitted. Forgot sudo?${NC}"
-    exit 1
-fi
+#if [ $UID != 0 ]; then
+#    echo -e "${RED}ERROR: Operation not permitted. Forgot sudo?${NC}"
+#    exit 1
+#fi
 clear
-echo -e "${GREEN}Comm. Tests installer${NC}"
-echo
 echo -e "${GREEN}OPTIONS${NC}"
 echo
-printf "LoRa (1) \nBluetooth (2) \nnRF (3) \nEXIT (4) \nChoose an option (1-4): "
+printf "1 - Install LoRa\n"
+printf "2 - Install Bluetooth\n"
+printf "3 - nRF [unavailable] \n"
+printf "4 - Test LoRa with node\n"
+printf "5 - Test Bluetooth with node\n"
+printf "6 - Exit\n"
+printf "Choose an option (1-6) and press enter: "
+
 read OPTION
 if [ $OPTION == "1" ]; then
     clear
@@ -35,5 +40,20 @@ fi
 if [ $OPTION == "3" ]; then
     echo -e "${RED}3${NC}"
 fi
+if [ $OPTION == "4" ]; then
+    #test lora
+    clear
+    pushd "lora-test"
+    ./node-test-lora
+    popd
+fi
+if [ $OPTION == "5" ]; then
+    #test bluetooth
+    clear
+    pushd "bluetooth-test"
+    python commControl.py
+    popd
+fi
+
 echo
 echo -e "${GREEN}THE END${NC}"
