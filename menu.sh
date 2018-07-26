@@ -26,7 +26,7 @@ read OPTION
 if [ $OPTION == "1" ]; then
     clear
     echo -e "${RED}LoRa${NC}"
-    pushd /script-tests/script-installation-lora-box
+    pushd ~/script-tests/script-installation-lora-box
     sudo ./install.sh
     popd
 fi
